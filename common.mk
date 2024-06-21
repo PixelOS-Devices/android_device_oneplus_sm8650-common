@@ -137,12 +137,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
-# Doze
-ifneq ($(TARGET_IS_TABLET),true)
-PRODUCT_PACKAGES += \
-    OplusDoze
-endif
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -353,9 +347,14 @@ endif
 
 # Sensors
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
     android.hardware.sensors-service.multihal \
     sensors.dynamic_sensor_hal \
     sensors.oplus
+=======
+    android.hardware.sensors-service.oplus-multihal \
+    sensors.dynamic_sensor_hal
+>>>>>>> 68b9480 (sm8550-common: Drop OplusDoze)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
