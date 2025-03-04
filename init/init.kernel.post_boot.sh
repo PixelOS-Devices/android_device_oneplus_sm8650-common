@@ -139,6 +139,11 @@ function configure_memory_parameters() {
 
 	configure_zram_parameters
 	configure_read_ahead_kb_values
+<<<<<<< HEAD
+=======
+        # Enable ZRAM on boot_complete
+        echo 0 > /proc/sys/vm/page-cluster 0
+>>>>>>> 4ff2577 (sm8650-common: init: move to 100 swappiness)
 	echo 100 > /proc/sys/vm/swappiness
 
 	# Disable periodic kcompactd wakeups. We do not use THP, so having many
