@@ -196,15 +196,6 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
-<<<<<<< HEAD
-=======
-# Power
-TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB := //$(COMMON_PATH)/power:libperfmgr-ext-oplus
-TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
-BOARD_POWER_CUSTOM_BOARD_LIB += \
-    vendor.oplus.hardware.touch-V1-ndk
-
->>>>>>> d672498 (sm8650-common: Provide a static lib for power mode extension)
 # Recovery
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.qcom
