@@ -347,14 +347,9 @@ endif
 
 # Sensors
 PRODUCT_PACKAGES += \
-<<<<<<< HEAD
-    android.hardware.sensors-service.multihal \
+    android.hardware.sensors-service.oplus-multihal \
     sensors.dynamic_sensor_hal \
     sensors.oplus
-=======
-    android.hardware.sensors-service.oplus-multihal \
-    sensors.dynamic_sensor_hal
->>>>>>> 68b9480 (sm8550-common: Drop OplusDoze)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
