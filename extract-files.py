@@ -62,6 +62,9 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/bin/qvrdatauploader',
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'odm/etc/gps.conf': blob_fixup()
+        .binary_regex_replace(b'com.oplus.locationproxy', b'com.google.android.carrierlocation')
+        .binary_regex_replace(b'DEBUG_LEVEL = 3', b'DEBUG_LEVEL = 2'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
     'system_ext/bin/horae': blob_fixup()
@@ -93,6 +96,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy': blob_fixup()
         .add_line_if_missing('sched_get_priority_min: 1')
         .add_line_if_missing('sched_get_priority_max: 1'),
+    'vendor/etc/sensors/hals.conf': blob_fixup()
+        .add_line_if_missing('sensors.oplus.so'),
     'vendor/etc/init/vendor.dpmd.rc': blob_fixup()
         .regex_replace(
             r'(service\s+vendor\.dpmd\s+/vendor/bin/vendor\.dpmd\s*\n)',
