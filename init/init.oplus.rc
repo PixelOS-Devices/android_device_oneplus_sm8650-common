@@ -14,15 +14,15 @@ on boot
     # Display
     chmod 0000 /sys/kernel/oplus_display/hbm
 
-    # Audio HAL feedback
-    chown media media /proc/mm_fb
-
 on post-fs-data
     # ADSP ramdump
     mkdir /data/vendor/mmdump 0777 system system
     chmod 0777 /data/vendor/mmdump
     mkdir /data/vendor/mmdump/adsp 0777 system system
     chmod 0777 /data/vendor/mmdump/adsp
+
+    # Audio HAL feedback
+    chown media media /proc/mm_fb
 
     # Camera
     mkdir /mnt/vendor/persist 0771 root system
