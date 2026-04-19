@@ -74,6 +74,23 @@
             <instance>com.qualcomm.qti.uceservice</instance>
         </interface>
     </hal>
+    <hal format="aidl">
+        <name>vendor.oplus.hardware.camera.aon</name>
+        <version>1</version>
+        <interface>
+            <name>IAONService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.oplus.hardware.camera.aon</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAONService</name>
+            <instance>oplusaoncameraservice</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.bluetooth_audio</name>
         <transport>hwbinder</transport>
@@ -183,23 +200,6 @@
         <version>1.1</version>
         <interface>
             <name>IImsFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oplus.hardware.camera.aon</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAONService</name>
-            <instance>oplusaoncameraservice</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.oplus.hardware.camera.aon</name>
-        <version>1</version>
-        <interface>
-            <name>IAONService</name>
             <instance>default</instance>
         </interface>
     </hal>
